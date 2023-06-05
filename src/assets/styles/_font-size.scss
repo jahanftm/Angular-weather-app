@@ -1,0 +1,18 @@
+@import "src/assets/styles/css-variables";
+
+$base-font-size: 16;
+
+@function relativeToRoot($sizeInPixel) {
+  $rem: $base-font-size;
+
+  @return ($sizeInPixel / $rem) + rem;
+}
+
+@function rem($sizeInPixel) {
+  @return relativeToRoot($sizeInPixel);
+}
+
+@function relativeToEl($base, $sizeInPixel) {
+  @return ($sizeInPixel / $base) + em;
+}
+

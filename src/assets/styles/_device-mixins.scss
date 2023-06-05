@@ -1,0 +1,9 @@
+@import "css-variables";
+@import "font-size";
+
+@mixin mediaDesktop {
+  $desktop : rem($DESKTOP_MIN_WIDTH);
+  @media (min-width: $desktop) {
+    @content
+  }
+}
