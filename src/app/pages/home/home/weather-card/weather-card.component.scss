@@ -1,0 +1,35 @@
+@import "src/assets/styles/globals";
+
+.card-wrapper {
+  border: 1px solid $steel100Color;
+  border-radius: rem(4);
+  padding: rem(12) rem(12) rem(12) rem(40);
+
+  &.feels-like {
+    background: $whiteColor url("weather-card-icons/feels-like-32.png") no-repeat 6px center/24px;
+  }
+
+  &.wind {
+    background: $whiteColor url("weather-card-icons/wind-32.png") no-repeat 6px center/24px;
+  }
+
+  &.pressure {
+    background: $whiteColor url("weather-card-icons/pressure-32.png") no-repeat 6px center/24px;
+  }
+
+  &.wet {
+    background: $whiteColor url("weather-card-icons/wet-32.png") no-repeat 6px center/24px;
+  }
+
+}
+
+.title {
+  font-size: rem(14);
+  color: $steel200Color;
+  margin-bottom: rem(10);
+}
+
+.value {
+  font-size: rem(20);
+  color: $primaryColor;
+}

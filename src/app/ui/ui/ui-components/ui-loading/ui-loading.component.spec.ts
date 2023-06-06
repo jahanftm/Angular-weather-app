@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { UiLoadingComponent } from './ui-loading.component';
+
+describe('UiLoadingComponent', () => {
+  let component: UiLoadingComponent;
+  let fixture: ComponentFixture<UiLoadingComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ UiLoadingComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(UiLoadingComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

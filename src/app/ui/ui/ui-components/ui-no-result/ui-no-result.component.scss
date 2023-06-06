@@ -1,0 +1,22 @@
+@import "src/assets/styles/globals";
+
+section {
+  padding-top: rem(100);
+  background: url('ui-no-result-images/no-result.jpg') no-repeat top center/142px;
+  mix-blend-mode: darken;
+
+  header {
+    text-align: center;
+    font-size: rem(20);
+    color: $primaryColor;
+
+  }
+}
+
+@include mediaDesktop() {
+  section{
+    padding-top: rem(160);
+    background-size: 200px;
+  }
+}
+

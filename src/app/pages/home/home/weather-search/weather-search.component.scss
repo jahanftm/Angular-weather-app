@@ -1,0 +1,43 @@
+@import "src/assets/styles/globals";
+
+.search-wrapper {
+  color: $whiteColor;
+  font-size: rem(20);
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  background: $whiteColor;
+  border: 1px solid $steel200Color;
+  overflow: hidden;
+  border-radius: rem(6);
+  height: rem(48);
+  margin-top: rem(16);
+
+  input {
+    text-indent: rem(8);
+    width: 100%;
+    border: unset;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .submit {
+    cursor: pointer;
+    width: rem(56);
+    background: url('weather-search-icons/search.png') no-repeat center center/42px;
+  }
+}
+
+@include mediaDesktop() {
+  .search {
+    height: rem(56);
+
+    input {
+      font-size: rem(18);
+    }
+  }
+}

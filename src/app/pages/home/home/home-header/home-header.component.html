@@ -1,0 +1,10 @@
+<section>
+  <app-weather-search [city]="city" (cityName)="onGetCityName($event)"></app-weather-search>
+
+  <header *ngIf="!spinner && weatherData">
+    <div>{{weatherData.main.temp}}° C</div>
+    <div>{{weatherData.name}}</div>
+    <div>{{weatherData.weather[0]?.description}}</div>
+  </header>
+
+</section>

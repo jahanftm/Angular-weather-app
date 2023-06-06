@@ -1,1 +1,26 @@
-<p>home works!</p>
+<app-home-header
+  [city]="city"
+  [spinner]="spinner"
+  [weatherData]="weatherData"
+  (cityName)="onGetWeatherData($event)"></app-home-header>
+
+<ui-loading *ngIf="spinner"></ui-loading>
+
+<ui-no-result *ngIf="!spinner && !weatherData"></ui-no-result>
+
+
+<section *ngIf="!spinner && weatherData">
+    <header>
+      <div>Today overview</div>
+      <div>{{currentDate | date}}</div>
+    </header>
+
+
+    <div class="body">
+      <app-weather-card *ngFor="let i of weatherData.weatherDataList"
+                        [icon]="i.icon"
+                        [title]="i.title"
+                        [value]=i.value></app-weather-card>
+
+    </div>
+</section>

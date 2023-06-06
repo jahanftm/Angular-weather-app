@@ -7,3 +7,10 @@
     @content
   }
 }
+
+@mixin mediaTablet{
+  $tablet : rem($TABLET_MIN_WIDTH);
+  @media (min-width: $tablet) {
+    @content
+  }
+}
