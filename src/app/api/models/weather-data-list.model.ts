@@ -1,5 +1,6 @@
 export interface WeatherDataListModel {
-  weatherDataList: WeatherDataList[]
+  weatherDataList: WeatherDataList[];
+  cache?: {[key:string]: WeatherDataList}
 }
 
 export interface WeatherDataList {
