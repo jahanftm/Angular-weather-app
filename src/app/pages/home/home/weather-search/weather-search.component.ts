@@ -11,7 +11,7 @@ export class WeatherSearchComponent implements OnInit {
   searchCity: string;
 
   @Output()
-  cityName = new EventEmitter<string>();
+  selectedCity = new EventEmitter<string>();
 
   constructor() { }
 
@@ -19,6 +19,6 @@ export class WeatherSearchComponent implements OnInit {
   }
 
   onClick() {
-    this.cityName.emit(this.searchCity);
+    this.selectedCity.emit(this.searchCity);
   }
 }

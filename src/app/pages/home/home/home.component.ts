@@ -27,14 +27,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.onGetWeatherData(this.searchCity);
   }
 
-  onGetWeatherData(value: string) {
+  onGetWeatherData(city: string) {
     if (this.spinner) {
       return;
     }
     this.spinner = true;
 
     this.subscription.add(
-      this.currentWeatherApiService.getCurrentWeatherData(value)
+      this.currentWeatherApiService.getCurrentWeatherData(city)
         .subscribe(
           {
             next: (data) => {

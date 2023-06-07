@@ -19,10 +19,10 @@ export class HomeHeaderComponent {
   searchCity: string;
 
   @Output()
-  cityName = new EventEmitter<string>();
+  selectedCity = new EventEmitter<string>();
 
-  onGetCityName(value: string) {
-    this.cityName.emit(value);
+  onSelectedCityName(value: string) {
+    this.selectedCity.emit(value);
   }
 
 
