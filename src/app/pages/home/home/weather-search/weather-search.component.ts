@@ -8,7 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class WeatherSearchComponent implements OnInit {
 
   @Input()
-  city: string;
+  searchCity: string;
 
   @Output()
   cityName = new EventEmitter<string>();
@@ -19,6 +19,6 @@ export class WeatherSearchComponent implements OnInit {
   }
 
   onClick() {
-    this.cityName.emit(this.city);
+    this.cityName.emit(this.searchCity);
   }
 }

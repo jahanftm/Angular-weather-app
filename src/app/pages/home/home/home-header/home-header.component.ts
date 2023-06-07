@@ -16,7 +16,7 @@ export class HomeHeaderComponent {
   spinner: boolean = false;
 
   @Input()
-  city: string;
+  searchCity: string;
 
   @Output()
   cityName = new EventEmitter<string>();

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   spinner: boolean = false;
 
-  city: string = 'france';
+  searchCity: string = 'france';
 
   weatherData?: currentWeather;
 
@@ -24,11 +24,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.onGetWeatherData(this.city);
+    this.onGetWeatherData(this.searchCity);
   }
 
   onGetWeatherData(value: string) {
-
     if (this.spinner) {
       return;
     }
@@ -49,8 +48,8 @@ export class HomeComponent implements OnInit, OnDestroy {
           }
         )
     )
-
   }
+
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
